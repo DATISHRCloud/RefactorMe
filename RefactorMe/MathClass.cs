@@ -49,6 +49,8 @@ namespace RefactorMe
             s += "\nDivided the result by 3 times a";
             r -= .2 * a;
             s += "\nSubtracted one-fifth of a from the result";
+            r = Math.Round(r, 2);
+            s += "\nRounded to 2 decimals";
 
             var rv = new KeyValuePair<string, double>(s, r);
             return rv;
