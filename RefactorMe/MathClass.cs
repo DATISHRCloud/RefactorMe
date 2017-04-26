@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace RefactorMe
 {
@@ -13,144 +14,125 @@ namespace RefactorMe
 
     public static class MathClass
     {
-        public static KeyValuePair<string, double>? DoSomeMaths(int a, int b, MathsType type)
+        private const string START = "Starting";
+
+        public static KeyValuePair<string, double>? DoSomeMaths(int operandA, int operandB, MathsType type)
         {
-            if (type == MathsType.Type1)
+            try
             {
-                var r = 0.0d;
-                var s = "Starting";
+                var log = new StringBuilder();
+                var result = 0.0d;
+                log.Append(START);
 
-                r = a + 2;
-                s += "\nAdded 2 to a";
-                r += b;
-                s += "\nAdded b to result";
-                r *= 4 - a;
-                s += "\nMultiplied the result by 4 minus a";
-                r /= a - .5 * b;
-                s += "\nDivided the result by the difference of a and half of b";
-                r = Math.Round(r, 2);
-                s += "\nRounded to 2 decimals";
+                
+                switch (type)
+                {
+                    case MathsType.Type1:
+                        return HandleType1(operandA, operandB, ref result, ref log);
+                      
+                    case MathsType.Type2:
+                        return HandleType2(operandA, operandB, ref result, ref log);
+                      
+                    case MathsType.Type3:
+                        return HandleType3(operandA, operandB, ref result, ref log);
+                        
+                    case MathsType.Type4:
+                        return HandleType4(operandA, operandB, ref result, ref log);
+                    default:
+                        return null;
+                }
 
-                var rv = new KeyValuePair<string, double>(s, r);
-                return rv;
+                
             }
-            else if (type == MathsType.Type2)
+            catch (Exception)
             {
-                var r = 0.0d;
-                var s = "Starting";
 
-                r = a + 2;
-                s += "\nAdded 2 to a";
-                r /= a - .5 * b;
-                s += "\nDivided the result by the difference of a and half of b";
-                r *= 4 - a;
-                s += "\nMultiplied the result by 4 minus a";
-                r += b;
-                s += "\nAdded b to result";
-                r *= 4 - a;
-                s += "\nMultiplied the result by 4 minus a";
-                r /= a - .5 * b;
-                s += "\nDivided the result by the difference of a and half of b";
-                r += b;
-                s += "\nAdded b to result";
-                r = Math.Round(r, 2);
-                s += "\nRounded to 2 decimals";
-
-                var rv = new KeyValuePair<string, double>(s, r);
-                return rv;
+                //TODO: (In a real Project.) Perform logging here (usually ELMAH)
+                throw;
             }
-            else if (type == MathsType.Type3)
-            {
-                var r = 0.0d;
-                var s = "Starting";
+        }
 
-                r = a + 2;
-                s += "\nAdded 2 to a";
-                r += b;
-                s += "\nAdded b to result";
-                r /= a - .5 * b;
-                s += "\nDivided the result by the difference of a and half of b";
-                r *= 4 - a;
-                s += "\nMultiplied the result by 4 minus a";
-                r += b;
-                s += "\nAdded b to result";
-                r /= a - .5 * b;
-                s += "\nDivided the result by the difference of a and half of b";
-                r *= 4 - a;
-                s += "\nMultiplied the result by 4 minus a";
-                r += b;
-                s += "\nAdded b to result";
-                r /= a - .5 * b;
-                s += "\nDivided the result by the difference of a and half of b";
-                r *= 4 - a;
-                s += "\nMultiplied the result by 4 minus a";
-                r += b;
-                s += "\nAdded b to result";
-                r /= a - .5 * b;
-                s += "\nDivided the result by the difference of a and half of b";
-                r *= 4 - a;
-                s += "\nMultiplied the result by 4 minus a";
-                r += b;
-                s += "\nAdded b to result";
-                r = Math.Round(r, 2);
-                s += "\nRounded to 2 decimals";
 
-                var rv = new KeyValuePair<string, double>(s, r);
-                return rv;
-            }
-            else if (type == MathsType.Type4)
-            {
-                var r = 0.0d;
-                var s = "Starting";
+        private static KeyValuePair<string, double> HandleType1(int operandA, int operandB, ref double result, ref StringBuilder log)
+        {
 
-                r = a + 2;
-                s += "\nAdded 2 to a";
-                r *= 4 - a;
-                s += "\nMultiplied the result by 4 minus a";
-                r += b;
-                s += "\nAdded b to result";
-                r /= a - .5 * b;
-                s += "\nDivided the result by the difference of a and half of b";
-                r *= 4 - a;
-                s += "\nMultiplied the result by 4 minus a";
-                r += b;
-                s += "\nAdded b to result";
-                r /= a - .5 * b;
-                s += "\nDivided the result by the difference of a and half of b";
-                r += b;
-                s += "\nAdded b to result";
-                r += b;
-                s += "\nAdded b to result";
-                r /= a - .5 * b;
-                s += "\nDivided the result by the difference of a and half of b";
-                r *= 4 - a;
-                s += "\nMultiplied the result by 4 minus a";
-                r += b;
-                s += "\nAdded b to result";
-                r /= a - .5 * b;
-                s += "\nDivided the result by the difference of a and half of b";
-                r *= 4 - a;
-                s += "\nMultiplied the result by 4 minus a";
-                r += b;
-                s += "\nAdded b to result";
-                r /= a - .5 * b;
-                s += "\nDivided the result by the difference of a and half of b";
-                r += b;
-                s += "\nAdded b to result";
-                r += b;
-                s += "\nAdded b to result";
-                r /= a - .5 * b;
-                s += "\nDivided the result by the difference of a and half of b";
-                r *= 4 - a;
-                s += "\nMultiplied the result by 4 minus a";
-                r = Math.Round(r, 2);
-                s += "\nRounded to 2 decimals";
+            MathOperations.AddTwoToOperandA(operandA, ref result, ref log);
+            MathOperations.AddOperandBToResult(operandB, ref result, ref log);
+            MathOperations.MultResultBy4MinOperandA(operandA, ref result, ref log);
+            MathOperations.DivideResultBy4MinOperandA(operandA, operandB, ref result, ref log);
+            MathOperations.RoundResultTo2Digits(ref result, ref log);
 
-                var rv = new KeyValuePair<string, double>(s, r);
-                return rv;
-            }
+            return new KeyValuePair<string, double>(log.ToString(), result);
+        }
+        private static KeyValuePair<string, double> HandleType2(int operandA, int operandB, ref double result, ref StringBuilder log)
+        {
+            MathOperations.AddTwoToOperandA(operandA, ref result, ref log);
+            MathOperations.DivideResultBy4MinOperandA(operandA, operandB, ref result, ref log);
+            MathOperations.MultResultBy4MinOperandA(operandA, ref result, ref log);
+            MathOperations.AddOperandBToResult(operandB, ref result, ref log);
+            MathOperations.MultResultBy4MinOperandA(operandA, ref result, ref log);
+            MathOperations.DivideResultBy4MinOperandA(operandA, operandB, ref result, ref log);
+            MathOperations.AddOperandBToResult(operandB, ref result, ref log);
+            MathOperations.RoundResultTo2Digits(ref result, ref log);
 
-            return null;
+
+            return new KeyValuePair<string, double>(log.ToString(), result);
+         
+        }
+
+        private static KeyValuePair<string, double> HandleType3(int operandA, int operandB, ref double result, ref StringBuilder log)
+        {
+
+            MathOperations.AddTwoToOperandA(operandA, ref result, ref log);
+            MathOperations.AddOperandBToResult(operandB, ref result, ref log);
+            MathOperations.DivideResultBy4MinOperandA(operandA, operandB, ref result, ref log);
+            MathOperations.MultResultBy4MinOperandA(operandA, ref result, ref log);
+            MathOperations.AddOperandBToResult(operandB, ref result, ref log);
+            MathOperations.DivideResultBy4MinOperandA(operandA, operandB, ref result, ref log);
+            MathOperations.MultResultBy4MinOperandA(operandA, ref result, ref log);
+            MathOperations.AddOperandBToResult(operandB, ref result, ref log);
+            MathOperations.DivideResultBy4MinOperandA(operandA, operandB, ref result, ref log);
+            MathOperations.MultResultBy4MinOperandA(operandA, ref result, ref log);
+            MathOperations.AddOperandBToResult(operandB, ref result, ref log);
+            MathOperations.DivideResultBy4MinOperandA(operandA, operandB, ref result, ref log);
+            MathOperations.MultResultBy4MinOperandA(operandA, ref result, ref log);
+            MathOperations.AddOperandBToResult(operandB, ref result, ref log);
+            MathOperations.RoundResultTo2Digits(ref result, ref log);
+
+
+            return new KeyValuePair<string, double>(log.ToString(), result);
+            
+
+        }
+
+        private static KeyValuePair<string, double> HandleType4(int operandA, int operandB, ref double result, ref StringBuilder log) 
+        {
+
+            MathOperations.AddTwoToOperandA(operandA, ref result, ref log);
+            MathOperations.MultResultBy4MinOperandA(operandA, ref result, ref log);
+            MathOperations.AddOperandBToResult(operandB, ref result, ref log);
+            MathOperations.DivideResultBy4MinOperandA(operandA, operandB, ref result, ref log);
+            MathOperations.MultResultBy4MinOperandA(operandA, ref result, ref log);
+            MathOperations.AddOperandBToResult(operandB, ref result, ref log);
+            MathOperations.DivideResultBy4MinOperandA(operandA, operandB, ref result, ref log);
+            MathOperations.AddOperandBToResult(operandB, ref result, ref log);
+            MathOperations.AddOperandBToResult(operandB, ref result, ref log);
+            MathOperations.DivideResultBy4MinOperandA(operandA, operandB, ref result, ref log);
+            MathOperations.MultResultBy4MinOperandA(operandA, ref result, ref log);
+            MathOperations.AddOperandBToResult(operandB, ref result, ref log);
+            MathOperations.DivideResultBy4MinOperandA(operandA, operandB, ref result, ref log);
+            MathOperations.MultResultBy4MinOperandA(operandA, ref result, ref log);
+            MathOperations.AddOperandBToResult(operandB, ref result, ref log);
+            MathOperations.DivideResultBy4MinOperandA(operandA, operandB, ref result, ref log);
+            MathOperations.AddOperandBToResult(operandB, ref result, ref log);
+            MathOperations.AddOperandBToResult(operandB, ref result, ref log);
+            MathOperations.DivideResultBy4MinOperandA(operandA, operandB, ref result, ref log);
+            MathOperations.MultResultBy4MinOperandA(operandA, ref result, ref log);
+            MathOperations.RoundResultTo2Digits(ref result, ref log);
+
+
+            return  new KeyValuePair<string, double>(log.ToString(), result);
+
         }
 
     }
