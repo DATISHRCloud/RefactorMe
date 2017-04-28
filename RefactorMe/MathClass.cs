@@ -26,7 +26,7 @@ namespace RefactorMe
             else if (type is MathsType.Type4)
                 calculator = new Calculator(new Type4());
                         
-            return calculator.Calculate(a,b,type);
+            return calculator.Calculate(a,b);
         }
 
     }

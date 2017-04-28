@@ -6,7 +6,7 @@ namespace RefactorMe
 {
     public interface IDoSomeMathCalculation
     {              
-        KeyValuePair<string, double>? DoSomeMaths(int a, int b, MathsType type);
+        KeyValuePair<string, double>? DoSomeMaths(int a, int b);
     }
 
    

@@ -13,8 +13,8 @@ namespace RefactorMe
            this._doSomeMathCalculation = doSomeMathCalculation;
         }
 
-        public KeyValuePair<string, double>? Calculate(int a, int b, MathsType type) {
-           return _doSomeMathCalculation.DoSomeMaths(a,b,type);
+        public KeyValuePair<string, double>? Calculate(int a, int b) {
+           return _doSomeMathCalculation.DoSomeMaths(a,b);
         }
 
     }

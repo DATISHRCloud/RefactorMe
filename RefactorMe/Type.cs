@@ -6,7 +6,7 @@ namespace RefactorMe
 {
     public class Type : IDoSomeMathCalculation
     {
-        public virtual KeyValuePair<string, double>? DoSomeMaths(int a, int b, MathsType type)
+        public virtual KeyValuePair<string, double>? DoSomeMaths(int a, int b)
         {      
             
             return Added2toA(a,2, "");
