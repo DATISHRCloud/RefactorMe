@@ -1,0 +1,6 @@
+C:\Projects\RefactorMe-master\RefactorMe\bin\Debug\netstandard1.4\RefactorMe.deps.json
+C:\Projects\RefactorMe-master\RefactorMe\bin\Debug\netstandard1.4\RefactorMe.dll
+C:\Projects\RefactorMe-master\RefactorMe\bin\Debug\netstandard1.4\RefactorMe.pdb
+C:\Projects\RefactorMe-master\RefactorMe\obj\Debug\netstandard1.4\RefactorMe.AssemblyInfo.cs
+C:\Projects\RefactorMe-master\RefactorMe\obj\Debug\netstandard1.4\RefactorMe.dll
+C:\Projects\RefactorMe-master\RefactorMe\obj\Debug\netstandard1.4\RefactorMe.pdb
