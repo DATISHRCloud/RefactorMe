@@ -1,0 +1,14 @@
+C:\Projects\RefactorMe-master\RefactorMe.Tests\bin\Debug\netcoreapp1.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Projects\RefactorMe-master\RefactorMe.Tests\bin\Debug\netcoreapp1.1\xunit.runner.utility.netstandard15.dll
+C:\Projects\RefactorMe-master\RefactorMe.Tests\bin\Debug\netcoreapp1.1\xunit.runner.reporters.netstandard15.dll
+C:\Projects\RefactorMe-master\RefactorMe.Tests\bin\Debug\netcoreapp1.1\RefactorMe.Tests.deps.json
+C:\Projects\RefactorMe-master\RefactorMe.Tests\bin\Debug\netcoreapp1.1\RefactorMe.Tests.runtimeconfig.json
+C:\Projects\RefactorMe-master\RefactorMe.Tests\bin\Debug\netcoreapp1.1\RefactorMe.Tests.runtimeconfig.dev.json
+C:\Projects\RefactorMe-master\RefactorMe.Tests\bin\Debug\netcoreapp1.1\RefactorMe.Tests.dll
+C:\Projects\RefactorMe-master\RefactorMe.Tests\bin\Debug\netcoreapp1.1\RefactorMe.Tests.pdb
+C:\Projects\RefactorMe-master\RefactorMe.Tests\bin\Debug\netcoreapp1.1\RefactorMe.dll
+C:\Projects\RefactorMe-master\RefactorMe.Tests\bin\Debug\netcoreapp1.1\RefactorMe.pdb
+C:\Projects\RefactorMe-master\RefactorMe.Tests\obj\Debug\netcoreapp1.1\RefactorMe.Tests.csprojResolveAssemblyReference.cache
+C:\Projects\RefactorMe-master\RefactorMe.Tests\obj\Debug\netcoreapp1.1\RefactorMe.Tests.AssemblyInfo.cs
+C:\Projects\RefactorMe-master\RefactorMe.Tests\obj\Debug\netcoreapp1.1\RefactorMe.Tests.dll
+C:\Projects\RefactorMe-master\RefactorMe.Tests\obj\Debug\netcoreapp1.1\RefactorMe.Tests.pdb
